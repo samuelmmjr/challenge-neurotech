@@ -4,8 +4,6 @@ const PORT = 3001
 
 const { createContact } = require('./controller/contact')
 
-// d930c26c-23b7-4172-896e-a47593270ac2
-
 const app = express();
 
 app.use(bodyParser.json());
