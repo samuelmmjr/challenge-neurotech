@@ -4,7 +4,7 @@ const create = async (email, phoneNumber, birthday, weight) => {
     const db = await connection();
     const data = await db.collection('contact')
     .insertOne({ email, phoneNumber, birthday, weight });
-    return { contact: { email, _id: data.insertedId, phoneNumber, birthday, weight } };
+    return { contact: { _id: data.insertedId, email, phoneNumber, birthday, weight } };
 };
 
 const findEmail = async (email) => {

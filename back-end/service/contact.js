@@ -23,7 +23,7 @@ const createContact = async (data) => {
     if (searchUser) {
         return { status: 409, error: 'Contato já registrado' };
     }
-    await create({ email, phoneNumber, birthday, weight }); //verificar craição na api
+    await create(email, phoneNumber, birthday, weight); //verificar craição na api
     return { status: 201, message: 'Usuário criado com sucesso' };
 }
 
